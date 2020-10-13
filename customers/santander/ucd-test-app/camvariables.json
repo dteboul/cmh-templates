@@ -1,0 +1,78 @@
+{
+  "input_datatypes": [  {
+    "name": "ucd_credentials",
+    "label": "UCD credentials"
+  } ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [ ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "ucd_user",
+      "label": "UCD User",
+      "description": "Generated",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_user}",
+      "validation": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_password}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD Server URL.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_server_url}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "environment_name",
+      "label": "Environment Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "agent_name",
+      "label": "Agent Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}

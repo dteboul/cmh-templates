@@ -1,0 +1,189 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "undefined",
+      "label": "undefined"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "Other-vra7",
+      "label": "Other - vra7"
+    },
+    {
+      "name": "ucd_component_mapping_component",
+      "label": "ucd_component_mapping Component"
+    },
+    {
+      "name": "vra7_resource_vra_catalog",
+      "label": "vra7_resource Vra Catalog"
+    },
+    {
+      "name": "null_resource_provisioner",
+      "label": "null_resource Provisioner"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "vra_username",
+      "label": "Vra Username",
+      "description": "Generated",
+      "type": "string",
+      "default": "configurationadmin",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_password",
+      "label": "Vra Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_tenant",
+      "label": "Vra Tenant",
+      "description": "Generated",
+      "type": "string",
+      "default": "vsphere.local",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_host",
+      "label": "Vra Host",
+      "description": "Generated",
+      "type": "string",
+      "default": "https://UCD-VRA3-03.rtp.raleigh.ibm.com",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_insecure",
+      "label": "Vra Insecure",
+      "description": "Generated",
+      "type": "string",
+      "default": "true",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_two_node_cmh_timeout",
+      "label": "Aws Two Node Cmh Timeout",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server-centos_0_agent_name",
+      "label": "Db Server Centos 0 Agent Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_provisioner",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_provisioner",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_provisioner",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_provisioner",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server-ubuntu_1_agent_name",
+      "label": "Web Server Ubuntu 1 Agent Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_provisioner",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}

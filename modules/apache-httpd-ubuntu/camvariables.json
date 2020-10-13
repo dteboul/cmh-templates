@@ -1,0 +1,75 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Other-null_resource.install_php",
+      "label": "Other - null_resource.install_php"
+    },
+    {
+      "name": "instances",
+      "label": "Instances"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "host_ip",
+      "label": "Server IP Address",
+      "description": "IP Address of Server to install Apache httpd",
+      "type": "string",
+      "default": "9.37.194.157",
+      "validation": "",
+      "group_name": "Target Server",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "host_name",
+      "label": "Server Name",
+      "description": "DNS Name of the Server",
+      "type": "string",
+      "default": "fit-vm17-157",
+      "validation": "",
+      "group_name": "Target Server",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "cam_user_password",
+      "label": "User Password",
+      "description": "User Password",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "CAM User",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "cam_user",
+      "label": "User Name",
+      "description": "UserName",
+      "type": "string",
+      "default": "root",
+      "validation": "",
+      "group_name": "CAM User",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}

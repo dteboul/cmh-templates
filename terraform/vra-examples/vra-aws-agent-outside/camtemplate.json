@@ -1,0 +1,14 @@
+{
+   "name": "vra-aws-agent-outside",
+   "description": "Description for vra-aws-agent-outside.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "vra-aws-agent-outside",
+     "bullets": []
+   }
+ }

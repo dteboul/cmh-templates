@@ -1,0 +1,14 @@
+{
+   "name": "azure-demo-2-cmh",
+   "description": "Demo template 2 from CMH for Azure",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Microsoft Azure"
+   },
+   "metadata": {
+     "displayName": "azure-demo-2",
+     "bullets": []
+   }
+ }

@@ -1,0 +1,326 @@
+{
+  "service": {
+    "specVersion": "v3",
+    "catalog_metadata": {
+      "name": "citi-use-case-1-single-VM-AWS",
+      "description": "Single RHEL VM on AWS with optional disks",
+      "image": "serviceicon_6.svg",
+      "category": "Citi",
+      "bullets": [
+        {
+          "title": "Cloud Provider",
+          "description": "Amazon Web Services"
+        }
+      ],
+      "providerDisplayName": "IBM",
+      "longDescription": "Deploy a single RHEL VM with either new or existing network stacks.  Specify optional # of disks and other configurations.",
+      "documentationUrl": "",
+      "supportUrl": "",
+      "bindable": false,
+      "updatable": "",
+      "author": "slightly_more_obscure_admin"
+    },
+    "tags": [],
+    "actions": [
+      {
+        "type": "provision",
+        "name": "Provision",
+        "description": "Default action for deployment of service",
+        "input_parameters": [
+          {
+            "name": "create_option",
+            "label": "create_option",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": true,
+            "secured": false,
+            "options": [
+              {
+                "value": "micro_existing",
+                "label": "micro_existing"
+              },
+              {
+                "value": "small_existing",
+                "label": "small_existing"
+              },
+              {
+                "value": "large_new",
+                "label": "large_new"
+              }
+            ]
+          },
+          {
+            "name": "existing_keypair_name",
+            "label": "Existing AWS keypair name",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "description": "Enter the name of an existing AWS keypair to use to access the new instance",
+            "default": ""
+          },
+          {
+            "name": "availability_zone",
+            "label": "Availability zone",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": true,
+            "secured": false,
+            "description": "Availability zone",
+            "options": [
+              {
+                "label": "us-east-1a",
+                "value": "us-east-1a",
+                "default": true
+              },
+              {
+                "label": "us-east-1b",
+                "value": "us-east-1b",
+                "default": false
+              },
+              {
+                "label": "us-east-1d",
+                "value": "us-east-1d",
+                "default": false
+              }
+            ]
+          }
+        ],
+        "flow": {
+          "conditions": [
+            {
+              "decision": {
+                "title": "create_option",
+                "options": [
+                  {
+                    "case": "micro_existing",
+                    "sequence": {
+                      "0": "usecase1bacdd7c4"
+                    }
+                  },
+                  {
+                    "case": "small_existing",
+                    "sequence": {
+                      "0": "usecase1a75336b8"
+                    }
+                  },
+                  {
+                    "case": "large_new",
+                    "sequence": {
+                      "0": "citicread5c9f509",
+                      "1": "usecase18f8211ec"
+                    }
+                  }
+                ],
+                "id": "decision0c3cb0cc",
+                "description": "Create a new VPC stack or use existing stack",
+                "mapped_parameter": "${input_parameters.create_option}"
+              }
+            }
+          ],
+          "templates": [
+            {
+              "usecase-1-single-vm-rhel": {
+                "title": "single-vm-micro-no-disks",
+                "template_name": "usecase-1-single-vm-rhel",
+                "version": "master",
+                "id": "usecase1bacdd7c4",
+                "template_type": "Terraform",
+                "template_content_type": "Amazon EC2",
+                "template_provider": "Amazon EC2",
+                "instance_name": "",
+                "cloud_connection_name": "cmh-aws-2",
+                "template_data_objects": {},
+                "template_params": {
+                  "citi-rhel-vm_ami": "ami-011b3ccf1bd6db744",
+                  "citi-rhel-vm_aws_instance_type": "t2.micro",
+                  "citi-rhel-vm_name": "citi-rhel-vm-${svc_instance.name}",
+                  "aws_key_pair_name": "${input_parameters.existing_keypair_name}",
+                  "availability_zone": "${input_parameters.availability_zone}",
+                  "vpc_id": "vpc-6c51be09",
+                  "security_group_name": "ucdev_secgroup_nva",
+                  "volume_size": "8",
+                  "volume_count": "0"
+                },
+                "outputs": [
+                  "public_ip_address",
+                  "instance_id"
+                ]
+              }
+            },
+            {
+              "usecase-1-single-vm-rhel": {
+                "title": "single-vm-small-2-disks",
+                "template_name": "usecase-1-single-vm-rhel",
+                "version": "master",
+                "id": "usecase1a75336b8",
+                "template_type": "Terraform",
+                "template_content_type": "Amazon EC2",
+                "template_provider": "Amazon EC2",
+                "instance_name": "",
+                "cloud_connection_name": "cmh-aws-2",
+                "template_data_objects": {},
+                "template_params": {
+                  "citi-rhel-vm_ami": "ami-011b3ccf1bd6db744",
+                  "citi-rhel-vm_aws_instance_type": "t2.small",
+                  "citi-rhel-vm_name": "citi-rhel-vm-${svc_instance.name}",
+                  "aws_key_pair_name": "${input_parameters.existing_keypair_name}",
+                  "availability_zone": "${input_parameters.availability_zone}",
+                  "vpc_id": "vpc-6c51be09",
+                  "security_group_name": "ucdev_secgroup_nva",
+                  "volume_size": "8",
+                  "volume_count": "2"
+                },
+                "outputs": [
+                  "public_ip_address",
+                  "instance_id"
+                ]
+              }
+            },
+            {
+              "citi-create-vpc-stack": {
+                "title": "citi-create-vpc-stack",
+                "template_name": "citi-create-vpc-stack",
+                "version": "master",
+                "id": "citicread5c9f509",
+                "template_type": "Terraform",
+                "template_content_type": "Amazon EC2",
+                "template_provider": "Amazon EC2",
+                "instance_name": "",
+                "cloud_connection_name": "cmh-aws-2",
+                "template_data_objects": {},
+                "template_params": {
+                  "network_name_prefix": "citi-vpc-${svc_instance.name}"
+                },
+                "outputs": [
+                  "vpc_id",
+                  "app_security_group_id",
+                  "app_security_group_name"
+                ]
+              }
+            },
+            {
+              "usecase-1-single-vm-rhel": {
+                "title": "single-vm-large-4-disks",
+                "template_name": "usecase-1-single-vm-rhel",
+                "version": "master",
+                "id": "usecase18f8211ec",
+                "template_type": "Terraform",
+                "template_content_type": "Amazon EC2",
+                "template_provider": "Amazon EC2",
+                "instance_name": "",
+                "cloud_connection_name": "cmh-aws-2",
+                "template_data_objects": {},
+                "template_params": {
+                  "citi-rhel-vm_ami": "ami-011b3ccf1bd6db744",
+                  "citi-rhel-vm_aws_instance_type": "t2.small",
+                  "citi-rhel-vm_name": "citi-rhel-vm-${svc_instance.name}",
+                  "aws_key_pair_name": "${input_parameters.existing_keypair_name}",
+                  "availability_zone": "${input_parameters.availability_zone}",
+                  "vpc_id": "${templates.citicread5c9f509.output.vpc_id}",
+                  "security_group_name": "${templates.citicread5c9f509.output.app_security_group_name}",
+                  "volume_size": "8",
+                  "volume_count": "4"
+                },
+                "outputs": [
+                  "public_ip_address",
+                  "instance_id"
+                ]
+              }
+            }
+          ],
+          "resthooks": [],
+          "notifications": [],
+          "sequence": {
+            "0": "decision0c3cb0cc"
+          }
+        },
+        "output_parameters": [
+          {
+            "name": "vm_ip_address",
+            "label": "VM IP address",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "default": "none"
+          },
+          {
+            "name": "vpc_id",
+            "label": "VPC ID",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": false,
+            "required": false,
+            "secured": false,
+            "description": "",
+            "default": "none"
+          }
+        ]
+      }
+    ],
+    "plans": [
+      {
+        "name": "Micro - Existing VPC",
+        "description": "Provision a micro VM with zero extra disks on an existing VPC stack",
+        "actions": [],
+        "plan_parameters": [
+          {
+            "name": "create_option",
+            "label": "create_option",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": true,
+            "required": true,
+            "secured": false,
+            "default": "micro_existing"
+          }
+        ]
+      },
+      {
+        "name": "Small - Existing VPC",
+        "description": "Provision a small VM with 2 extra disks on existing VPC stack",
+        "plan_parameters": [
+          {
+            "name": "create_option",
+            "label": "create_option",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": true,
+            "required": true,
+            "secured": false,
+            "default": "small_existing"
+          }
+        ]
+      },
+      {
+        "name": "Large - New VPC",
+        "description": "Provision a large VM with 4 extra disks on a new VPC stack",
+        "plan_parameters": [
+          {
+            "name": "create_option",
+            "label": "create_option",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": true,
+            "required": true,
+            "secured": false,
+            "default": "large_new"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "input_datatypes": [
+    {
+      "name": "ucd_credentials_data",
+      "label": "UCD credentials data"
+    },
+    {
+      "name": "vra_credentials_data",
+      "label": "vra credentials data"
+    }
+  ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "undefined",
+      "label": "undefined"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "Other-vra7",
+      "label": "Other - vra7"
+    },
+    {
+      "name": "vra7_resource_vra_catalog",
+      "label": "vra7_resource Vra Catalog"
+    },
+    {
+      "name": "ucd_component_mapping_component",
+      "label": "ucd_component_mapping Component"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "vra_username",
+      "label": "Vra Username",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra_credentials_data.vra_user}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_password",
+      "label": "Vra Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra_credentials_data.vra_password}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_tenant",
+      "label": "Vra Tenant",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra_credentials_data.vra_tenant}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_host",
+      "label": "Vra Host",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra_credentials_data.vra_host}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_insecure",
+      "label": "Vra Insecure",
+      "description": "Generated",
+      "type": "string",
+      "default": "true",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "cmh_vcenter_two_node_2_timeout",
+      "label": "Cmh Vcenter Two Node 2 Timeout",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_user",
+      "label": "Web Server User",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_password",
+      "label": "Web Server Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_user",
+      "label": "Db Server User",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_password",
+      "label": "Db Server Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "UCD user",
+      "type": "string",
+      "default": "${ucd_credentials_data.ucd_user}",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD password",
+      "type": "string",
+      "default": "${ucd_credentials_data.ucd_password}",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD server URL",
+      "type": "string",
+      "default": "${ucd_credentials_data.ucd_host}",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "environment_name",
+      "label": "Environment Name",
+      "description": "Environment name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_agent_name",
+      "label": "Web Server Agent Name",
+      "description": "Agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_agent_name",
+      "label": "Db Server Agent Name",
+      "description": "Agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "camtags_tagsmap",
+      "label": "Camtags Tagsmap",
+      "description": "Camtags Tagsmap",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "camtags_tagslist",
+      "label": "Camtags Tagslist",
+      "description": "Camtags Tagslist",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

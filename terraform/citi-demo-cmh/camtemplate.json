@@ -1,0 +1,14 @@
+{
+   "name": "citi-demo-cmh",
+   "description": "Description for citi-demo-cmh.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Amazon EC2"
+   },
+   "metadata": {
+     "displayName": "citi-demo-cmh",
+     "bullets": []
+   }
+ }

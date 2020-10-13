@@ -1,0 +1,14 @@
+{
+   "name": "azure-create-demo-1",
+   "description": "Description for azure-create-demo-1.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Microsoft Azure"
+   },
+   "metadata": {
+     "displayName": "azure-create-demo-1",
+     "bullets": []
+   }
+ }

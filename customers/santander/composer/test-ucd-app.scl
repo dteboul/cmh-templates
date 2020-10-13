@@ -1,0 +1,109 @@
+{
+  "service": {
+    "specVersion": "v2",
+    "catalog_metadata": {
+      "name": "test-ucd-application",
+      "description": "Test UCD application service",
+      "longDescription": "",
+      "providerDisplayName": "",
+      "image": "serviceicon_1.svg",
+      "category": "CloudServices",
+      "bullets": [
+        {
+          "title": "Cloud Provider",
+          "description": "IBM Bluemix Platform"
+        }
+      ],
+      "author": "admin"
+    },
+    "tags": [],
+    "parameters": [
+      {
+        "name": "agent-name",
+        "label": "agent name prefix",
+        "customtype": "string",
+        "type": "string",
+        "immutable": false,
+        "hidden": false,
+        "required": true,
+        "secured": false,
+        "description": "agent name prefix",
+        "default": "my-agent-name"
+      }
+    ],
+    "flow": {
+      "conditions": [],
+      "templates": [
+        {
+          "aws-single-vm-ucd-agent": {
+            "title": "aws-single-vm-ucd-agent",
+            "template_name": "aws-single-vm-ucd-agent",
+            "version": "master",
+            "id": "awssingl3c407d01",
+            "template_type": "Terraform",
+            "template_content_type": "Amazon EC2",
+            "template_provider": "Amazon EC2",
+            "instance_name": "",
+            "cloud_connection_name": "cmh-aws",
+            "template_data_objects": {
+              "aws_cloud": "cmh-aws-cloud-defaults",
+              "ucd_credentials": "icdemo3_cmh_ucd"
+            },
+            "template_params": {
+              "test-aws-server_ami": "${aws_cloud.ami}",
+              "test-aws-server_aws_instance_type": "${aws_cloud.instance_type}",
+              "availability_zone": "${aws_cloud.availability_zone}",
+              "test-aws-server_name": "my-test-vm",
+              "vpc_id": "${aws_cloud.vpc_id}",
+              "group_name": "${aws_cloud.group_name}",
+              "my_agent_name": "${parameters.agent-name}-${svc_instance.service_instance_id}",
+              "ucd_server_url": "${ucd_credentials.ucd_server_url}",
+              "ucd_user": "${ucd_credentials.ucd_user}",
+              "ucd_password": "${ucd_credentials.ucd_password}"
+            },
+            "outputs": [
+              "agent_name"
+            ]
+          }
+        },
+        {
+          "ucd-test-app": {
+            "title": "ucd-test-app",
+            "template_name": "ucd-test-app",
+            "version": "master",
+            "id": "ucdtesta0fd02190",
+            "template_type": "Terraform",
+            "template_content_type": "Other",
+            "template_provider": "Other",
+            "instance_name": "",
+            "cloud_connection_name": "Other",
+            "template_data_objects": {
+              "ucd_credentials": "icdemo3_cmh_ucd"
+            },
+            "template_params": {
+              "ucd_user": "${ucd_credentials.ucd_user}",
+              "ucd_password": "${ucd_credentials.ucd_password}",
+              "ucd_server_url": "${ucd_credentials.ucd_server_url}",
+              "environment_name": "test-env-${svc_instance.service_instance_id}",
+              "agent_name": "${templates.awssingl3c407d01.output.agent_name}"
+            },
+            "outputs": []
+          }
+        }
+      ],
+      "resthooks": [],
+      "notifications": [],
+      "sequence": {
+        "0": "awssingl3c407d01",
+        "1": "ucdtesta0fd02190"
+      }
+    },
+    "plans": [
+      {
+        "name": "Standard",
+        "description": "To deploy a Standard plan",
+        "plan_parameters": []
+      }
+    ]
+  }
+}

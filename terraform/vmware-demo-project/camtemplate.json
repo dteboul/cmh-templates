@@ -1,0 +1,14 @@
+{
+   "name": "vmware-demo-project",
+   "description": "Description for vmware-demo-project.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "vmware-demo-project",
+     "bullets": []
+   }
+ }

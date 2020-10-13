@@ -1,0 +1,227 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "instance-settings",
+      "label": "Instance settings"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "network-settings",
+      "label": "Network settings"
+    },
+    {
+      "name": "volume-settings",
+      "label": "volume-settings"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "citi-rhel-vm_ami",
+      "label": "Instance AMI",
+      "description": "AMI for RHEL instance",
+      "type": "string",
+      "default": "ami-011b3ccf1bd6db744",
+      "validation": "",
+      "group_name": "instance-settings",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": true,
+      "immutable_after_create": false
+    },
+    {
+      "name": "citi-rhel-vm_aws_instance_type",
+      "label": "Instance size",
+      "description": "Size of instance to create",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "instance-settings",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "t2.micro",
+          "label": "Micro",
+          "default": true
+        },
+        {
+          "value": "t2.small",
+          "label": "Small"
+        },
+        {
+          "value": "t2.large",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "name": "citi-rhel-vm_name",
+      "label": "VM Name tag",
+      "description": "Instance name tag",
+      "type": "string",
+      "default": "Citi RHEL VM",
+      "validation": "",
+      "group_name": "instance-settings",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_key_pair_name",
+      "label": "Existing AWS key pair name",
+      "description": "Name of an existing AWS keypair to associate with this instance",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "instance-settings",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Availability Zone",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "network-settings",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "us-east-1a",
+          "label": "us-east-1a",
+          "default": true
+        },
+        {
+          "value": "us-east-1b",
+          "label": "us-east-1b"
+        },
+        {
+          "value": "us-east-1d",
+          "label": "us-east-1d"
+        }
+      ]
+    },
+    {
+      "name": "vpc_id",
+      "label": "VPC ID",
+      "description": "Virtual Private Cloud ID",
+      "type": "string",
+      "default": "vpc-6c51be09",
+      "validation": "",
+      "group_name": "network-settings",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "security_group_name",
+      "label": "Security group name",
+      "description": "Name of security group to associate with this instance",
+      "type": "string",
+      "default": "ucdev_secgroup_nva",
+      "validation": "",
+      "group_name": "network-settings",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "volume_size",
+      "label": "EBS Volume Size",
+      "description": "Size of additional EBS volumes to create",
+      "type": "string",
+      "default": "8",
+      "validation": "",
+      "group_name": "volume-settings",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "volume_count",
+      "label": "Number of additional volumes",
+      "description": "Number of additional volumes to create for this instance",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "volume-settings",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "0",
+          "label": "0",
+          "default": true
+        },
+        { 
+          "value": "1",
+          "label": "1"
+        },
+        { 
+          "value": "2",
+          "label": "2"
+        },
+        { 
+          "value": "3",
+          "label": "3"
+        },
+        { 
+          "value": "4",
+          "label": "4"
+        }
+      ]
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "public_ip_address",
+      "label": "Public IP Address",
+      "description": "Public IP Address",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "instance_id",
+      "label": "Instance ID",
+      "description": "Instance Id",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

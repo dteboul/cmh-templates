@@ -1,0 +1,204 @@
+{
+  "input_datatypes": [  {
+    "name": "aws_cloud",
+    "label": "AWS cloud settings"
+  } ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Instances-aws_instance.web-server",
+      "label": "Instances - aws_instance.web-server"
+    },
+    {
+      "name": "Other-aws",
+      "label": "Other - aws"
+    },
+    {
+      "name": "instances",
+      "label": "Instances"
+    },
+    {
+      "name": "aws_subnet_networks",
+      "label": "aws_subnet Networks"
+    },
+    {
+      "name": "aws_instance_connection",
+      "label": "aws_instance Connection"
+    },
+    {
+      "name": "null_resource_connection",
+      "label": "null_resource Connection"
+    },
+    {
+      "name": "aws_instance_networks",
+      "label": "aws_instance Networks"
+    },
+    {
+      "name": "security",
+      "label": "Security"
+    },
+    {
+      "name": "azurerm_virtual_machine_resource_group",
+      "label": "azurerm_virtual_machine Resource Group"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "db-server_ami",
+      "label": "Db Server Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_aws_instance_type",
+      "label": "Db Server Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_name",
+      "label": "Db Server Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_ami",
+      "label": "Web Server Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_aws_instance_type",
+      "label": "Web Server Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_name",
+      "label": "Web Server Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "group_name",
+      "label": "Group Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "Vpc Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server-user",
+      "label": "Web Server User",
+      "description": "Generated",
+      "type": "string",
+      "default": "ubuntu",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server-user",
+      "label": "Db Server User",
+      "description": "Generated",
+      "type": "string",
+      "default": "centos",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}

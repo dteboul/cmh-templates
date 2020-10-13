@@ -1,0 +1,251 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Instances",
+      "label": "Instances"
+    },
+    {
+      "name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "label": "Instances - vsphere_virtual_machine.virtual_machine"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "Other-vsphere",
+      "label": "Other - vsphere"
+    },
+    {
+      "name": "vsphere_virtual_machine_networks",
+      "label": "vsphere_virtual_machine Networks"
+    },
+    {
+      "name": "instances",
+      "label": "Instances"
+    },
+    {
+      "name": "null_resource_other",
+      "label": "null_resource Other"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "web-server-name",
+      "label": "Web Server Name",
+      "description": "Virtual machine name for web-server",
+      "type": "string",
+      "default": "cmh-web",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server-name",
+      "label": "Db Server Name",
+      "description": "Virtual machine name for db-server",
+      "type": "string",
+      "default": "cmh-db",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_number_of_vcpu",
+      "label": "Virtual Machine Number Of Vcpu",
+      "description": "Number of virtual cpu's.",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false,
+      "options": [
+        {
+          "value": "1",
+          "label": "1",
+          "default": true
+        },
+        { "value": "2", "label": "2" },
+        { "value": "4", "label": "4" }
+      ]
+    },
+    {
+      "name": "virtual_machine_memory",
+      "label": "Virtual Machine Memory",
+      "description": "Memory allocation.",
+      "type": "string",
+      "default": "1024",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_disk_name",
+      "label": "Virtual Machine Disk Name",
+      "description": "The name of the disk. Forces a new disk if changed. This should only be a longer path if attaching an external disk.",
+      "type": "string",
+      "default": "disk0",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_disk_size",
+      "label": "Virtual Machine Disk Size",
+      "description": "The size of the disk, in GiB.",
+      "type": "string",
+      "default": "20",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_template_name",
+      "label": "Virtual Machine Template Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "CentosOS7_THIN",
+      "validation": "",
+      "group_name": "Instances",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_template_ubuntu_name",
+      "label": "Virtual Machine Template Ubuntu Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "Ubuntu16_THIN_64",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_datacenter_name",
+      "label": "Virtual Machine Datacenter Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "UCD_DC1",
+      "validation": "",
+      "group_name": "Other",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_datastore_name",
+      "label": "Virtual Machine Datastore Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "UCD-VRA-RSX6-001",
+      "validation": "",
+      "group_name": "Other",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_resource_pool",
+      "label": "Virtual Machine Resource Pool",
+      "description": "Resource pool.",
+      "type": "string",
+      "default": "resgroup-27",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "network_network_name",
+      "label": "Network Network Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "VIS241",
+      "validation": "",
+      "group_name": "vsphere_virtual_machine_networks",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_password",
+      "label": "vm_password",
+      "description": "Generated",
+      "type": "string",
+      "default": "VRApassw0rd",
+      "validation": "",
+      "group_name": "Instances",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "db_ip_address",
+      "label": "Db Ip Address",
+      "description": "Db Ip Address",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "web_ip_address",
+      "label": "Web Ip Address",
+      "description": "Web Ip Address",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

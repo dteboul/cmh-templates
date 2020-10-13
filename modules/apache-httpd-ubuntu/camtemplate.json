@@ -1,0 +1,14 @@
+{
+   "name": "apache-httpd-ubuntu",
+   "description": "Description for apache-httpd-ubuntu.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "apache-httpd-ubuntu",
+     "bullets": []
+   }
+ }

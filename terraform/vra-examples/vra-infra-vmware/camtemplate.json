@@ -1,0 +1,14 @@
+{
+   "name": "vra-infra-vmware",
+   "description": "Description for vra-infra-vmware.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "vra-infra-vmware",
+     "bullets": []
+   }
+ }

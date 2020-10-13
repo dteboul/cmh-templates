@@ -1,0 +1,155 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "cloud",
+      "label": "Cloud Input Variables"
+    },
+    {
+      "name": "virtualmachine",
+      "label": "Virtual Machine Input Settings"
+    }
+  ],
+  "output_groups": [  {
+    "name": "content_template_output",
+    "label": "Outputs"
+  } ],
+  "template_input_params": [
+    {
+      "name": "singlenode_vm_os_user",
+      "label": "Ansible Node Template User Name",
+      "description": "The user name to use while configuring the Single Node.",
+      "type": "string",
+      "default": "centos",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "availability_zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "us-east-1a",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws-ami",
+      "label": "aws-ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "ami-b81dbfc5",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_instance_type",
+      "label": "aws_instance_type",
+      "description": "Generated",
+      "type": "string",
+      "default": "t2.small",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "vpc_id",
+      "description": "Generated",
+      "type": "string",
+      "default": "vpc-6c51be09",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "group_name",
+      "label": "group_name",
+      "description": "Generated",
+      "type": "string",
+      "default": "ucdev_secgroup_nva",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_key_pair_name",
+      "label": "aws_key_pair_name",
+      "description": "Generated",
+      "type": "string",
+      "default": "ans-cmh-key",
+      "validation": "",
+      "group_name": "virtualmachine",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_host_count",
+      "label": "vm_host_count",
+      "description": "Generated",
+      "type": "string",
+      "default": "1",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "Ansible Public SSH Key for other machines",
+      "label": "Ansible Public SSH Key for other machines",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vm IP addresses",
+      "label": "Vm Ip Addresses",
+      "description": "",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "list"
+    }
+  ]
+}

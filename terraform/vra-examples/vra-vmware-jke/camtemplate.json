@@ -1,0 +1,14 @@
+{
+   "name": "vra-vmware-jke",
+   "description": "Description for vra-vmware-jke.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "vra-vmware-jke",
+     "bullets": []
+   }
+ }

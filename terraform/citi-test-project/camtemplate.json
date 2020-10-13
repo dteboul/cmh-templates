@@ -1,0 +1,14 @@
+{
+   "name": "citi-test-project",
+   "description": "Description for citi-test-project.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "citi-test-project",
+     "bullets": []
+   }
+ }

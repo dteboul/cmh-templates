@@ -1,0 +1,79 @@
+{
+    "name": "aws_cloud",
+    "label": "AWS cloud",
+    "description": "Data types for AWS infrastructure settings",
+    "attributes": [
+        {
+            "name": "centos_ami",
+            "type": "string",
+            "description": "AMI for Centos instance",
+            "label": "centos AMI",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "ubuntu_ami",
+            "type": "string",
+            "description": "AMI for Ubuntu instance",
+            "label": "ubuntu AMI",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "instance_type",
+            "type": "string",
+            "description": "Instance type",
+            "label": "instance type",
+            "required": "true",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "availability_zone",
+            "type": "string",
+            "description": "Availability zone",
+            "label": "availability zone",
+            "required": "true",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "group_name",
+            "type": "string",
+            "description": "Security group name",
+            "label": "Security group name",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "vpc_id",
+            "type": "string",
+            "description": "AWS VPC ID",
+            "label": "VPC ID",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        }
+    ]
+}

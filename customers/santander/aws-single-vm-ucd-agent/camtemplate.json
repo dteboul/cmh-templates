@@ -1,0 +1,14 @@
+{
+   "name": "aws-single-vm-ucd-agent",
+   "description": "Description for aws-single-vm-ucd-agent.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "aws-single-vm-ucd-agent",
+     "bullets": []
+   }
+ }

@@ -1,0 +1,203 @@
+{
+  "input_datatypes": [  {
+    "name": "ucd_credentials",
+    "label": "UCD credentials"
+  } ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Other-null_resource.jke-db-agent",
+      "label": "Other - null_resource.jke-db-agent"
+    },
+    {
+      "name": "null_resource_connection",
+      "label": "null_resource Connection"
+    },
+    {
+      "name": "ucd_component_mapping_component",
+      "label": "ucd_component_mapping Component"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "jke-db-agent_connection_user",
+      "label": "Jke Db Agent Connection User",
+      "description": "Jke Db Agent Connection User",
+      "type": "string",
+      "default": "root",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-db-agent_connection_private_key",
+      "label": "Jke Db Agent Connection Private Key",
+      "description": "Jke Db Agent Connection Private Key",
+      "type": "string",
+      "default": "key_value",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-db-agent_connection_host",
+      "label": "Jke Db Agent Connection Host",
+      "description": "Jke Db Agent Connection Host",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-web-agent_connection_user",
+      "label": "Jke Web Agent Connection User",
+      "description": "Jke Web Agent Connection User",
+      "type": "string",
+      "default": "root",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-web-agent_connection_private_key",
+      "label": "Jke Web Agent Connection Private Key",
+      "description": "Jke Web Agent Connection Private Key",
+      "type": "string",
+      "default": "key_value",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-web-agent_connection_host",
+      "label": "Jke Web Agent Connection Host",
+      "description": "Jke Web Agent Connection Host",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "null_resource_connection",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "UCD User.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_user}",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_password}",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD Server URL.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_server_url}",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "environment_name",
+      "label": "Environment Name",
+      "description": "Environment name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-db-agent_agent_name",
+      "label": "Jke Db Agent Agent Name",
+      "description": "Agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "jke-web-agent_agent_name",
+      "label": "Jke Web Agent Agent Name",
+      "description": "Agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [  {
+    "name": "app_url",
+    "label": "App Url",
+    "description": "App Url",
+    "group_name": "",
+    "secured": false,
+    "hidden": false,
+    "shortname": "",
+    "type": "string"
+  } ]
+}

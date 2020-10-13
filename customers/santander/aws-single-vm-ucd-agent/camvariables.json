@@ -1,0 +1,156 @@
+{
+  "input_datatypes": [
+    {
+      "name": "aws_cloud",
+      "label": "AWS cloud settings"
+    },
+    {
+      "name": "ucd_credentials",
+      "label": "UCD credentials"
+    }
+  ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [ ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "test-aws-server_ami",
+      "label": "Test Aws Server Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.ami}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "test-aws-server_aws_instance_type",
+      "label": "Test Aws Server Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.instance_type}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.availability_zone}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "test-aws-server_name",
+      "label": "Test Aws Server Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "my-test-vm",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "Vpc Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.vpc_id}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "group_name",
+      "label": "Group Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.group_name}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "my_agent_name",
+      "label": "My Agent Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "my-test-agent",
+      "validation": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD Server URL.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_server_url}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "UCD User",
+      "description": "Generated",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_user}",
+      "validation": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_password}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [  {
+    "name": "agent_name",
+    "label": "Agent Name",
+    "description": "Agent Name",
+    "secured": false,
+    "hidden": false,
+    "shortname": ""
+  } ]
+}

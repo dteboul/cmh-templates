@@ -1,0 +1,355 @@
+{
+  "input_datatypes": [
+    {
+      "name": "aws_credentials",
+      "label": "AWS creds"
+    },
+    {
+      "name": "aws_cloud",
+      "label": "AWS cloud settings"
+    },
+    {
+      "name": "softlayer_credentials",
+      "label": "SoftLayer creds"
+    },
+    {
+      "name": "softlayer_cloud",
+      "label": "SoftLayer cloud settings"
+    },
+    {
+      "name": "ucd_credentials",
+      "label": "UCD credentials"
+    }
+  ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [ ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "aws_access_id",
+      "label": "Aws Access Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_credentials.aws_access_id}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "aws_secret_key",
+      "label": "Aws Secret Key",
+      "description": "Generated",
+      "type": "password",
+      "default": "${aws_credentials.aws_secret_key}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "region",
+      "label": "Region",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.region}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_ami",
+      "label": "Web Server Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.ami}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_aws_instance_type",
+      "label": "Web Server Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.instance_type}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_availability_zone",
+      "label": "Web Server Availability Zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.availability_zone}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_name",
+      "label": "Web Server Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "bpd-aws-vm",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "Vpc Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.vpc_id}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "group_name",
+      "label": "Group Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "${aws_cloud.group_name}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ibm_sl_username",
+      "label": "Ibm Sl Username",
+      "description": "Generated",
+      "type": "string",
+      "default": "${softlayer_credentials.softlayer_username}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ibm_sl_api_key",
+      "label": "Ibm Sl Api Key",
+      "description": "Generated",
+      "type": "password",
+      "default": "${softlayer_credentials.softlayer_api_key}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_domain",
+      "label": "Vm Instance Domain",
+      "description": "The domain for the computing instance.",
+      "type": "string",
+      "default": "${softlayer_cloud.vm_instance_domain}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_hostname",
+      "label": "Vm Instance Hostname",
+      "description": "The hostname for the computing instance.",
+      "type": "string",
+      "default": "${softlayer_cloud.vm_instance_hostname}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_datacenter",
+      "label": "Vm Instance Datacenter",
+      "description": "The datacenter in which you want to provision the instance. NOTE: If dedicated_host_name or dedicated_host_id is provided then the datacenter should be same as the dedicated host datacenter.",
+      "type": "string",
+      "default": "${softlayer_cloud.vm_instance_datacenter}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_os_reference_code",
+      "label": "Vm Instance Os Reference Code",
+      "description": "Generated",
+      "type": "string",
+      "default": "${softlayer_cloud.vm_instance_os_reference_code}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "softlayer-vlan_public_vlan_id",
+      "label": "Softlayer Vlan Public Vlan Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "${softlayer_cloud.softlayer-vlan_public_vlan_id}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "softlayer-vlan_private_vlan_id",
+      "label": "Softlayer Vlan Private Vlan Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "${softlayer_cloud.softlayer-vlan_private_vlan_id}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "UCD User.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_user}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_password}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD Server URL.",
+      "type": "string",
+      "default": "${ucd_credentials.ucd_server_url}",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "environment_name",
+      "label": "Environment Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_agent_name",
+      "label": "Db Server Agent Name",
+      "description": "agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_agent_name",
+      "label": "Web Server Agent Name",
+      "description": "agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "web_server_ip_address",
+      "label": "Web Server IP Address",
+      "description": "Web Server IP Address",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    },
+    {
+      "name": "db_server_ip_address",
+      "label": "DB Server IP Address",
+      "description": "DB Server IP Address",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    },
+    {
+      "name": "jke_app_url",
+      "label": "Jke App Url",
+      "description": "Jke App Url",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    }
+  ]
+}

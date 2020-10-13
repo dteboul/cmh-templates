@@ -1,0 +1,14 @@
+{
+   "name": "usecase-1-single-vm-rhel",
+   "description": "Citi Use Case 1 - Single RHEL VM with options",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Amazon EC2"
+   },
+   "metadata": {
+     "displayName": "usecase-1-single-vm-rhel",
+     "bullets": []
+   }
+ }

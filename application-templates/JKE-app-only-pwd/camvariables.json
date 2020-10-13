@@ -1,0 +1,207 @@
+{
+  "input_datatypes": [  {
+    "name": "ucd_credentials_data",
+    "label": "UCD credentials data"
+  } ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Globals",
+      "label": "Globals"
+    },
+    {
+      "name": "Components",
+      "label": "Components"
+    },
+    {
+      "name": "Components-null_resource",
+      "label": "Components - null_resource"
+    },
+    {
+      "name": "Unused",
+      "label": "Unused"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "ucd_user",
+      "label": "UCD User",
+      "description": "Generated",
+      "type": "string",
+      "default": "${ucd_credentials_data.ucd_user}",
+      "validation": "",
+      "group_name": "Components-null_resource",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password.",
+      "type": "string",
+      "default": "${ucd_credentials_data.ucd_password}",
+      "validation": "",
+      "group_name": "Components-null_resource",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD Server URL",
+      "type": "string",
+      "default": "${ucd_credentials_data.ucd_host}",
+      "validation": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "environment_name",
+      "label": "Environment Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Globals",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_agent_name",
+      "label": "Db Server Agent Name",
+      "description": "agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Globals",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_agent_name",
+      "label": "Web Server Agent Name",
+      "description": "agent name",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Globals",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server-public-ip-address",
+      "label": "Web Server Public Ip Address",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Components",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server-public-ip-address",
+      "label": "DB Server IP Address",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Globals",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server-user",
+      "label": "web-server-user",
+      "description": "Generated",
+      "type": "string",
+      "default": "ubuntu",
+      "validation": "",
+      "group_name": "Globals",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server-user",
+      "label": "db-server-user",
+      "description": "Generated",
+      "type": "string",
+      "default": "root",
+      "validation": "",
+      "group_name": "Globals",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_password",
+      "label": "web-server_password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_password",
+      "label": "db-server_password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [  {
+    "name": "jke_app_url",
+    "label": "Jke App Url",
+    "description": "Jke App Url",
+    "group_name": "",
+    "secured": false,
+    "hidden": false,
+    "shortname": "",
+    "type": "string"
+  } ]
+}

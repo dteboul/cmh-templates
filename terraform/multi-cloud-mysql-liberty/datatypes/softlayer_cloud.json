@@ -1,0 +1,79 @@
+{
+    "name": "softlayer_cloud",
+    "label": "Softlayer cloud",
+    "description": "Data types for IBM cloud infrastructure settings",
+    "attributes": [
+        {
+            "name": "vm_instance_domain",
+            "type": "string",
+            "description": "VM domain",
+            "label": "domain",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "vm_instance_hostname",
+            "type": "string",
+            "description": "VM hostname ",
+            "label": "hostname",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "vm_instance_datacenter",
+            "type": "string",
+            "description": "VM datacenter",
+            "label": "datacenter",
+            "required": "true",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "vm_instance_os_reference_code",
+            "type": "string",
+            "description": "VM OS reference code",
+            "label": "OS reference code",
+            "required": "true",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "softlayer-vlan_public_vlan_id",
+            "type": "string",
+            "description": "Public VLAN ID",
+            "label": "Public VLAN ID",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        },
+        {
+            "name": "softlayer-vlan_private_vlan_id",
+            "type": "string",
+            "description": "Private VLAN ID",
+            "label": "Private VLAN ID",
+            "required": "false",
+            "secured": "false",
+            "immutable": "false",
+            "hidden": "false",
+            "default": "",
+            "options": null
+        }
+    ]
+}

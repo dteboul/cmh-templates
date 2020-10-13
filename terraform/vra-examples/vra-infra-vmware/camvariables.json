@@ -1,0 +1,103 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "undefined",
+      "label": "undefined"
+    },
+    {
+      "name": "Other-vra7",
+      "label": "Other - vra7"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "vra_username",
+      "label": "Vra Username",
+      "description": "Generated",
+      "type": "string",
+      "default": "configurationadmin",
+      "validation": "",
+      "group_name": "Other-vra7",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_password",
+      "label": "Vra Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Other-vra7",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_tenant",
+      "label": "Vra Tenant",
+      "description": "Generated",
+      "type": "string",
+      "default": "vsphere.local",
+      "validation": "",
+      "group_name": "Other-vra7",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_host",
+      "label": "Vra Host",
+      "description": "Generated",
+      "type": "string",
+      "default": "https://UCD-VRA3-03.rtp.raleigh.ibm.com",
+      "validation": "",
+      "group_name": "Other-vra7",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_insecure",
+      "label": "Vra Insecure",
+      "description": "Generated",
+      "type": "string",
+      "default": "true",
+      "validation": "",
+      "group_name": "Other-vra7",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "cmh_vcenter_two_node_2_timeout",
+      "label": "Cmh Vcenter Two Node 2 Timeout",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "undefined",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}

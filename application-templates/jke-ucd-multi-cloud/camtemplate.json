@@ -1,0 +1,14 @@
+{
+   "name": "jke-ucd-multi-cloud-mysql-liberty",
+   "description": "UCD application Multi-cloud install of MySQL (IBM) and Liberty (AWS)",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "jke-ucd-multi-cloud-mysql-liberty",
+     "bullets": []
+   }
+ }

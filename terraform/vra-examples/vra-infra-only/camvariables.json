@@ -1,0 +1,178 @@
+{
+  "input_datatypes": [  {
+    "name": "vra-connection",
+    "label": "vRA connection"
+  } ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [  {
+    "name": "vra7_resource_vra_catalog",
+    "label": "vra7",
+    "description": ""
+  } ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "vra_username",
+      "label": "Vra Username",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra-connection.vra_user}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_password",
+      "label": "Vra Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra-connection.vra_password}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_tenant",
+      "label": "Vra Tenant",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra-connection.vra_tenant}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_host",
+      "label": "Vra Host",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra-connection.vra_host}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vra_insecure",
+      "label": "Vra Insecure",
+      "description": "Generated",
+      "type": "string",
+      "default": "${vra-connection.vra_insecure}",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "cmh_vcenter_two_node_2_timeout",
+      "label": "Cmh Vcenter Two Node 2 Timeout",
+      "description": "Generated",
+      "type": "string",
+      "default": "15",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_user",
+      "label": "Web Server User",
+      "description": "Generated",
+      "type": "string",
+      "default": "root",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_password",
+      "label": "Web Server Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_user",
+      "label": "Db Server User",
+      "description": "Generated",
+      "type": "string",
+      "default": "root",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_password",
+      "label": "Db Server Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "vra7_resource_vra_catalog",
+      "required": true,
+      "secured": true,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "vra7-db-server-ip",
+      "label": "DB Server IP address",
+      "description": "DB Server IP address from VRA",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vra7-web-server-ip",
+      "label": "Web Server IP address",
+      "description": "DB Server IP address from VRA",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,678 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "instances",
+      "label": "Instances"
+    },
+    {
+      "name": "aws_instance_networks",
+      "label": "aws_instance Networks"
+    },
+    {
+      "name": "ucd_component_mapping_component",
+      "label": "ucd_component_mapping Component"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "region",
+      "label": "region",
+      "description": "Generated",
+      "type": "string",
+      "default": "us-east-1",
+      "validation": "",
+      "group_name": "",
+      "required": false,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-instance_ami",
+      "label": "Web Instance Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "ami-66506c1c",
+      "validation": "",
+      "group_name": "instances",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-instance_aws_instance_type",
+      "label": "Web Instance Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "t2.medium",
+      "validation": "",
+      "group_name": "instances",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "us-east-1a",
+      "validation": "",
+      "group_name": "instances",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-instance_name",
+      "label": "Web Instance Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "cmh-web-instance",
+      "validation": "",
+      "group_name": "instances",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_user",
+      "label": "Ucd User",
+      "description": "UCD User.",
+      "type": "string",
+      "default": "admin",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_password",
+      "label": "Ucd Password",
+      "description": "UCD Password.",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ucd_server_url",
+      "label": "Ucd Server Url",
+      "description": "UCD Server URL.",
+      "type": "string",
+      "default": "http://icdemo3.cloudy-demos.com:9080",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "environment_name",
+      "label": "Environment Name",
+      "description": "Environment name",
+      "type": "string",
+      "default": "cmh-module-test-env",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-instance_agent_name",
+      "label": "Web Instance Agent Name",
+      "description": "Agent name",
+      "type": "string",
+      "default": "cmh-module-test-agent",
+      "validation": "",
+      "group_name": "ucd_component_mapping_component",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "default_vpc_id",
+      "label": "Default Vpc Id",
+      "description": "The ID of the VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "public_route_table_ids",
+      "label": "Public Route Table Ids",
+      "description": "List of IDs of public route tables",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "intra_subnets",
+      "label": "Intra Subnets",
+      "description": "List of IDs of intra subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_main_route_table_id",
+      "label": "Vpc Main Route Table Id",
+      "description": "The ID of the main route table associated with this VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_instance_tenancy",
+      "label": "Default Vpc Instance Tenancy",
+      "description": "Tenancy of instances spin up within VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_cidr_block",
+      "label": "Default Vpc Cidr Block",
+      "description": "The CIDR block of the VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "igw_id",
+      "label": "Igw Id",
+      "description": "The ID of the Internet Gateway",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "elasticache_subnet_group_name",
+      "label": "Elasticache Subnet Group Name",
+      "description": "Name of elasticache subnet group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "elasticache_subnets_cidr_blocks",
+      "label": "Elasticache Subnets Cidr Blocks",
+      "description": "List of cidr_blocks of elasticache subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "database_subnets_cidr_blocks",
+      "label": "Database Subnets Cidr Blocks",
+      "description": "List of cidr_blocks of database subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "public_subnets",
+      "label": "Public Subnets",
+      "description": "List of IDs of public subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vgw_id",
+      "label": "Vgw Id",
+      "description": "The ID of the VPN Gateway",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "nat_public_ips",
+      "label": "Nat Public Ips",
+      "description": "List of public Elastic IPs created for AWS NAT Gateway",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "public_subnets_cidr_blocks",
+      "label": "Public Subnets Cidr Blocks",
+      "description": "List of cidr_blocks of public subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "private_subnets_cidr_blocks",
+      "label": "Private Subnets Cidr Blocks",
+      "description": "List of cidr_blocks of private subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_default_security_group_id",
+      "label": "Default Vpc Default Security Group Id",
+      "description": "The ID of the security group created by default on VPC creation",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "private_route_table_ids",
+      "label": "Private Route Table Ids",
+      "description": "List of IDs of private route tables",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "private_subnets",
+      "label": "Private Subnets",
+      "description": "List of IDs of private subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_enable_dns_support",
+      "label": "Vpc Enable Dns Support",
+      "description": "Whether or not the VPC has DNS support",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "intra_route_table_ids",
+      "label": "Intra Route Table Ids",
+      "description": "List of IDs of intra route tables",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "elasticache_subnets",
+      "label": "Elasticache Subnets",
+      "description": "List of IDs of elasticache subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_enable_dns_hostnames",
+      "label": "Vpc Enable Dns Hostnames",
+      "description": "Whether or not the VPC has DNS hostname support",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_security_group_id",
+      "label": "Default Security Group Id",
+      "description": "The ID of the security group created by default on VPC creation",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_cidr_block",
+      "label": "Vpc Cidr Block",
+      "description": "The CIDR block of the VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_enable_dns_support",
+      "label": "Default Vpc Enable Dns Support",
+      "description": "Whether or not the VPC has DNS support",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_default_route_table_id",
+      "label": "Default Vpc Default Route Table Id",
+      "description": "The ID of the default route table",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_endpoint_dynamodb_pl_id",
+      "label": "Vpc Endpoint Dynamodb Pl Id",
+      "description": "The prefix list for the DynamoDB VPC endpoint.",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_endpoint_s3_pl_id",
+      "label": "Vpc Endpoint S 3 Pl Id",
+      "description": "The prefix list for the S3 VPC endpoint.",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "redshift_subnet_group",
+      "label": "Redshift Subnet Group",
+      "description": "ID of redshift subnet group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "redshift_subnets",
+      "label": "Redshift Subnets",
+      "description": "List of IDs of redshift subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_main_route_table_id",
+      "label": "Default Vpc Main Route Table Id",
+      "description": "The ID of the main route table associated with this VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_enable_dns_hostnames",
+      "label": "Default Vpc Enable Dns Hostnames",
+      "description": "Whether or not the VPC has DNS hostname support",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_vpc_default_network_acl_id",
+      "label": "Default Vpc Default Network Acl Id",
+      "description": "The ID of the default network ACL",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "nat_ids",
+      "label": "Nat Ids",
+      "description": "List of allocation ID of Elastic IPs created for AWS NAT Gateway",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "elasticache_subnet_group",
+      "label": "Elasticache Subnet Group",
+      "description": "ID of elasticache subnet group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "redshift_subnets_cidr_blocks",
+      "label": "Redshift Subnets Cidr Blocks",
+      "description": "List of cidr_blocks of redshift subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "database_subnets",
+      "label": "Database Subnets",
+      "description": "List of IDs of database subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_instance_tenancy",
+      "label": "Vpc Instance Tenancy",
+      "description": "Tenancy of instances spin up within VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_route_table_id",
+      "label": "Default Route Table Id",
+      "description": "The ID of the default route table",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "default_network_acl_id",
+      "label": "Default Network Acl Id",
+      "description": "The ID of the default network ACL",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_endpoint_dynamodb_id",
+      "label": "Vpc Endpoint Dynamodb Id",
+      "description": "The ID of VPC endpoint for DynamoDB",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_endpoint_s3_id",
+      "label": "Vpc Endpoint S 3 Id",
+      "description": "The ID of VPC endpoint for S3",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "natgw_ids",
+      "label": "Natgw Ids",
+      "description": "List of NAT Gateway IDs",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "intra_subnets_cidr_blocks",
+      "label": "Intra Subnets Cidr Blocks",
+      "description": "List of cidr_blocks of intra subnets",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "database_subnet_group",
+      "label": "Database Subnet Group",
+      "description": "ID of database subnet group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "vpc_id",
+      "label": "Vpc Id",
+      "description": "The ID of the VPC",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "this_security_group_id",
+      "label": "This Security Group Id",
+      "description": "The ID of the security group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "this_security_group_description",
+      "label": "This Security Group Description",
+      "description": "The description of the security group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "this_security_group_name",
+      "label": "This Security Group Name",
+      "description": "The name of the security group",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "this_security_group_owner_id",
+      "label": "This Security Group Owner Id",
+      "description": "The owner ID",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "this_security_group_vpc_id",
+      "label": "This Security Group Vpc Id",
+      "description": "The VPC ID",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

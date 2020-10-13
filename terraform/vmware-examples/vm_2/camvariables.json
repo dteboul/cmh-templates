@@ -1,0 +1,131 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [
+    {
+      "name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "label": "Instances - vsphere_virtual_machine.virtual_machine"
+    },
+    {
+      "name": "Other-vsphere",
+      "label": "Other - vsphere"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "user",
+      "label": "User",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Other-vsphere",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "Other-vsphere",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vsphere_server",
+      "label": "Vsphere Server",
+      "description": "Generated",
+      "type": "string",
+      "default": "ucd-vc67-03.rtp.raleigh.ibm.com",
+      "validation": "",
+      "group_name": "Other-vsphere",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "allow_unverified_ssl",
+      "label": "Allow Unverified Ssl",
+      "description": "Generated",
+      "type": "string",
+      "default": "true",
+      "validation": "",
+      "group_name": "Other-vsphere",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_name",
+      "label": "Virtual Machine Name",
+      "description": "Virtual machine name for virtual_machine",
+      "type": "string",
+      "default": "bradterraformtest3",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_number_of_vcpu",
+      "label": "Virtual Machine Number Of Vcpu",
+      "description": "Number of virtual cpu's.",
+      "type": "string",
+      "default": "1",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "virtual_machine_memory",
+      "label": "Virtual Machine Memory",
+      "description": "Memory allocation.",
+      "type": "string",
+      "default": "1024",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "resource_pool_resource_pool",
+      "label": "Resource Pool Resource Pool",
+      "description": "Resource pool.",
+      "type": "string",
+      "default": "resgroup-27",
+      "validation": "",
+      "group_name": "Instances-vsphere_virtual_machine.virtual_machine",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
+}

@@ -1,0 +1,14 @@
+{
+   "name": "vra-infra-only",
+   "description": "Description for vra-infra-only.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "vra-infra-only",
+     "bullets": []
+   }
+ }

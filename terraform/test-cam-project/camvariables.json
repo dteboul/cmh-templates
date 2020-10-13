@@ -1,0 +1,169 @@
+{
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [ ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "web-server_ami",
+      "label": "Web Server Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "ami-06c4cb11",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_aws_instance_type",
+      "label": "Web Server Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "t2.medium",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Generated",
+      "type": "string",
+      "default": "us-east-1d",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-server_name",
+      "label": "Web Server Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "test-web-server",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_ami",
+      "label": "Db Server Ami",
+      "description": "Generated",
+      "type": "string",
+      "default": "ami-4bf3d731",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_aws_instance_type",
+      "label": "Db Server Aws Instance Type",
+      "description": "Generated",
+      "type": "string",
+      "default": "t2.medium",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-server_name",
+      "label": "Db Server Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "test-db-server",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "Vpc Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "vpc-6c51be09",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "group_name",
+      "label": "Group Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "ucdev_secgroup_nva",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web_volume_volume_size",
+      "label": "Web Volume Volume Size",
+      "description": "Generated",
+      "type": "string",
+      "default": "20",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db_volume_volume_size",
+      "label": "Db Volume Volume Size",
+      "description": "Generated",
+      "type": "string",
+      "default": "40",
+      "validation": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [
+    {
+      "name": "web_server_ip_address",
+      "label": "Web Server Ip Address",
+      "description": "Web Server Ip Address",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    },
+    {
+      "name": "db_server_ip_address",
+      "label": "Db Server Ip Address",
+      "description": "Db Server Ip Address",
+      "secured": false,
+      "hidden": false,
+      "shortname": ""
+    }
+  ]
+}

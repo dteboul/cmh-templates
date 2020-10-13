@@ -1,0 +1,156 @@
+[
+    {
+      "name": "aws_access_id",
+      "label": "Aws Access Id",
+      "description": "Aws Access Id",
+      "type": "string",
+      "default": "AKIAIK7PKHZGBHLGDZ2Q",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "aws_secret_key",
+      "label": "Aws Secret Key",
+      "description": "Aws Secret Key",
+      "type": "string",
+      "default": "9BVc+Qy7fUQvNwZlQAwkn52PK77RYiXxQDllQmZF",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "region",
+      "label": "Region",
+      "description": "Region",
+      "type": "string",
+      "default": "us-east-1",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "web-server_ami",
+      "label": "Web Server Ami",
+      "description": "Web Server Ami",
+      "type": "string",
+      "default": "ami-06c4cb11",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "web-server_aws_instance_type",
+      "label": "Web Server Aws Instance Type",
+      "description": "Web Server Aws Instance Type",
+      "type": "string",
+      "default": "t2.medium",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "availability_zone",
+      "label": "Availability Zone",
+      "description": "Availability Zone",
+      "type": "string",
+      "default": "us-east-1d",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "web-server_name",
+      "label": "Web Server Name",
+      "description": "Web Server Name",
+      "type": "string",
+      "default": "demo-web-server",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "db-server_ami",
+      "label": "Db Server Ami",
+      "description": "Db Server Ami",
+      "type": "string",
+      "default": "ami-4bf3d731",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "db-server_aws_instance_type",
+      "label": "Db Server Aws Instance Type",
+      "description": "Db Server Aws Instance Type",
+      "type": "string",
+      "default": "t2.medium",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "db-server_name",
+      "label": "Db Server Name",
+      "description": "Db Server Name",
+      "type": "string",
+      "default": "demo-db-server",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "vpc_id",
+      "label": "Vpc Id",
+      "description": "Vpc Id",
+      "type": "string",
+      "default": "vpc-6c51be09",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "group_name",
+      "label": "Group Name",
+      "description": "Group Name",
+      "type": "string",
+      "default": "ucdev_secgroup_nva",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "web-volume_volume_size",
+      "label": "Web Volume Volume Size",
+      "description": "Web Volume Volume Size",
+      "type": "string",
+      "default": "15",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    },
+    {
+      "name": "db-volume_volume_size",
+      "label": "Db Volume Volume Size",
+      "description": "Db Volume Volume Size",
+      "type": "string",
+      "default": "20",
+      "hidden": false,
+      "immutable": false,
+      "required": true,
+      "secured": false
+    }
+]

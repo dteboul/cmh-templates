@@ -1,0 +1,14 @@
+{
+   "name": "camc-sp-test",
+   "description": "Description for camc-sp-test.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "HCL",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "camc-sp-test",
+     "bullets": []
+   }
+ }

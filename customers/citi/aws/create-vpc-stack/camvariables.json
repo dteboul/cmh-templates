@@ -1,0 +1,56 @@
+{
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
+  "output_namespace": "",
+  "input_groups": [  {
+    "name": "network-settings",
+    "label": "Network settings"
+  } ],
+  "output_groups": [ ],
+  "template_input_params": [  {
+    "name": "network_name_prefix",
+    "label": "Network Name Prefix",
+    "description": "The prefix of names for VPC, Gateway, Subnet and Security Group",
+    "type": "string",
+    "default": "citi-vpc",
+    "validation": "",
+    "group_name": "network-settings",
+    "required": true,
+    "secured": false,
+    "hidden": false,
+    "immutable": false,
+    "immutable_after_create": false
+  } ],
+  "template_output_params": [
+    {
+      "name": "vpc_id",
+      "label": "VPC Id",
+      "description": "ID of new VPC",
+      "group_name": "network-settings",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "app_security_group_id",
+      "label": "Application Security Group Id",
+      "description": "ID of application security group",
+      "group_name": "network-settings",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "app_security_group_name",
+      "label": "App Security Group Name",
+      "description": "App Security Group Name",
+      "group_name": "network-settings",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
+}

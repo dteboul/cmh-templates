@@ -1,9 +1,175 @@
 {
-  "input_datatypes": [],
-  "input_namespaces": [],
+  "input_datatypes": [ ],
+  "input_namespaces": [ ],
   "output_namespace": "",
-  "input_groups": [],
-  "output_groups": [],
-  "template_input_params": [],
-  "template_output_params": []
+  "input_groups": [
+    {
+      "name": "Instances-ibm_compute_vm_instance.web-server",
+      "label": "Instances - ibm_compute_vm_instance.web-server"
+    },
+    {
+      "name": "Other",
+      "label": "Other"
+    },
+    {
+      "name": "instances",
+      "label": "Instances"
+    },
+    {
+      "name": "ibm_compute_vm_instance_networks",
+      "label": "ibm_compute_vm_instance Networks"
+    },
+    {
+      "name": "ibm_compute_vm_instance_connection",
+      "label": "ibm_compute_vm_instance Connection"
+    },
+    {
+      "name": "ibm_storage_file_storage",
+      "label": "ibm_storage_file Storage"
+    }
+  ],
+  "output_groups": [ ],
+  "template_input_params": [
+    {
+      "name": "vm_instance_domain",
+      "label": "Vm Instance Domain",
+      "description": "The domain for the computing instance.",
+      "type": "string",
+      "default": "ibm.com",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_hostname",
+      "label": "Vm Instance Hostname",
+      "description": "The hostname for the computing instance.",
+      "type": "string",
+      "default": "webhost",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_datacenter",
+      "label": "Vm Instance Datacenter",
+      "description": "The datacenter in which you want to provision the instance. NOTE: If dedicated_host_name or dedicated_host_id is provided then the datacenter should be same as the dedicated host datacenter.",
+      "type": "string",
+      "default": "par01",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ibm_ssh_key_name",
+      "label": "Ibm Ssh Key Name",
+      "description": "Generated",
+      "type": "string",
+      "default": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCryc9ZCQX2BWO8baPAM78rGpviaHAesmnlaENtqbEmEDuY1znPszHVWlbrBsZlpu+HZAIPZQHMQ4RRZ8k+94Tp4KLHwP/YoWRkXFKuQgxDqfwCb80OaJpNZsf1u6zXf0NQhhgdLmBkSwy8YHvh9j1Vl9kDDsKIzmwzrDUAIohcLVIETgKZpIMtGL7vpMsMg5Qg6ddWb5UkRJiQbGWBAupCKPENqGttW5050DkDYPEM5hbLRwiPjOA/EuNYU9G9Nj9pFTgD+J6xQMeLbpYtVtBUZCtuIYUjl2uRlKrYUXwdwum9AtLvRr0HpS75LfBugvjT4E9jkoVQrunJ9cZnhKPP",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance_os_reference_code",
+      "label": "Vm Instance Os Reference Code",
+      "description": "Generated",
+      "type": "string",
+      "default": "UBUNTU_16_64",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "testsecurefield",
+      "label": "Testsecurefield",
+      "description": "testsecurefield",
+      "type": "string",
+      "default": "123456789",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ibm_network_public_vlan_id",
+      "label": "Ibm Network Public Vlan Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "2894292",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "ibm_network_private_vlan_id",
+      "label": "Ibm Network Private Vlan Id",
+      "description": "Generated",
+      "type": "string",
+      "default": "2894294",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance1_hostname",
+      "label": "Vm Instance 1 Hostname",
+      "description": "The hostname for the computing instance.",
+      "type": "string",
+      "default": "dbhost",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "vm_instance1_os_reference_code",
+      "label": "Vm Instance 1 Os Reference Code",
+      "description": "Generated",
+      "type": "string",
+      "default": "UBUNTU_16_64",
+      "regex": "",
+      "group_name": "",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    }
+  ],
+  "template_output_params": [ ]
 }
